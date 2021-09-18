@@ -1,12 +1,8 @@
 package com.user;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Entity
-@Table(name = "laptop")
+@Embeddable
 public class Laptop {
     @Id
     @Column(name = "lid")
