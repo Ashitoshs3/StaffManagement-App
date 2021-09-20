@@ -181,12 +181,9 @@
             <button type="submit"  class="btn btn-primary btn-lg">Sign Up</button>
         </div>
     </form>
-    <div class="text-center">Already have an account? <a href="#">Login here</a></div>
+    <div class="text-center">Already have an account?<a href="#myModal" class="trigger-btn" data-toggle="modal">Login here</a></div>
 </div>
-<div class="text-center">
-    <!-- Button HTML (to Trigger Modal) -->
-    <a href="#myModal" class="trigger-btn" data-toggle="modal">Click to Open Login Modal</a>
-</div>
+
 
 <!-- Modal HTML -->
 <div id="myModal" class="modal fade">
@@ -197,14 +194,14 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
-                <form action="/examples/actions/confirmation.php" method="post">
+                <form action="login" method="post">
                     <div class="form-group">
                         <i class="fa fa-user"></i>
-                        <input type="text" class="form-control" placeholder="Username" required="required">
+                        <input  name="username" type="text" class="form-control" placeholder="Username" required="required">
                     </div>
                     <div class="form-group">
                         <i class="fa fa-lock"></i>
-                        <input type="password" class="form-control" placeholder="Password" required="required">
+                        <input name="password" type="password" class="form-control" placeholder="Password" required="required">
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">

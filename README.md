@@ -11,7 +11,7 @@ This is a java web application for managing your Staff Data.
 * Servlet
 * Maven
 
-
+![img.png](img.png)
 
 ### How to setup on your local machine?
 * Open the POM.xml file in you IDE ( Preferably IntelliJ IDEA )
