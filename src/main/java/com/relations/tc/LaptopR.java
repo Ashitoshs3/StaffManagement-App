@@ -1,11 +1,13 @@
 package com.relations.tc;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
+//@Table(name = "LaptopR")
 public class LaptopR {
         @Id
         @Column(name = "lid")
+//        @GeneratedValue(strategy=GenerationType.TABLE)
         private int lid ;
         @Column(name = "lname")
         private String lname ;

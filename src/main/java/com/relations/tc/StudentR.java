@@ -1,19 +1,44 @@
 package com.relations.tc;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name = "student")
+@Table(name = "StudentR")
 public class StudentR {
 
         @Id
+//        @GeneratedValue(strategy=GenerationType.TABLE)
         private int Rollno ;
         private String Fname ;
         private int Marks ;
 
-        @Override
+        @OneToOne
+        private LaptopR laptop ;
+
+    public LaptopR getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(LaptopR laptop) {
+        this.laptop = laptop;
+    }
+
+    //        In this below mapping this we are mapping two tables students and laptop
+//        @OneToMany(cascade = CascadeType.ALL)
+//        @JoinColumn(name = "lid")
+//        @OrderColumn(name = "type")
+//        private List<LaptopR> Llap ;
+//
+//    public List<LaptopR> getLlap() {
+//        return Llap;
+//    }
+//
+//    public void setLlap(List<LaptopR> llap) {
+//        Llap = llap;
+//    }
+
+    @Override
         public String toString() {
             return "student{" +
                     "Rollno=" + Rollno +
