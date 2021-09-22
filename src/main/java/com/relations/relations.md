@@ -7,3 +7,11 @@
     2. When You are making an student object to save you have to specify the laptop object to get its lid connected.
   
 ![img.png](img.png)
+
+### One to Many 
+* This is used when we want to connect the one object to multiple objects of different types (linking one row to multiple rows of different table)
+  1. Method One (A separate table is created for linking) 
+    instead of creating a single object of LaptopR you have to create a List <LaptopR>
+    
+     
+  

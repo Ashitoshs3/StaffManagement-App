@@ -13,16 +13,28 @@ public class StudentR {
         private String Fname ;
         private int Marks ;
 
-        @OneToOne
-        private LaptopR laptop ;
+        @OneToMany
+        @JoinColumn(name = "lid")
+        private List<LaptopR> laptops ;
 
-    public LaptopR getLaptop() {
-        return laptop;
+    public List<LaptopR> getLaptops() {
+        return laptops;
     }
 
-    public void setLaptop(LaptopR laptop) {
-        this.laptop = laptop;
+    public void setLaptops(List<LaptopR> laptops) {
+        this.laptops = laptops;
     }
+
+//        @OneToOne
+//        private LaptopR laptop ;
+//
+//    public LaptopR getLaptop() {
+//        return laptop;
+//    }
+//
+//    public void setLaptop(LaptopR laptop) {
+//        this.laptop = laptop;
+//    }
 
     //        In this below mapping this we are mapping two tables students and laptop
 //        @OneToMany(cascade = CascadeType.ALL)
