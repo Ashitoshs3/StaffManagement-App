@@ -1,6 +1,7 @@
 package com.relations.tc;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -8,14 +9,15 @@ import java.util.List;
 public class StudentR {
 
         @Id
-//        @GeneratedValue(strategy=GenerationType.TABLE)
+        @GeneratedValue(strategy=GenerationType.TABLE)
         private int Rollno ;
         private String Fname ;
         private int Marks ;
 
         @OneToMany
         @JoinColumn(name = "lid")
-        private List<LaptopR> laptops ;
+//        @OrderColumn(name="type")
+        private List<LaptopR> laptops  = new ArrayList<>();
 
     public List<LaptopR> getLaptops() {
         return laptops;

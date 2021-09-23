@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class LaptopR {
         @Id
         @Column(name = "lid")
-//        @GeneratedValue(strategy=GenerationType.TABLE)
+        @GeneratedValue(strategy=GenerationType.TABLE)
         private int lid ;
         @Column(name = "lname")
         private String lname ;
