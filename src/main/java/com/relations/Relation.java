@@ -68,14 +68,15 @@ public class Relation {
         Session session = sf.openSession();
         Transaction tx = session.beginTransaction();
 
-        session.save(laptop1);
-        session.save(laptop2);
-        session.save(laptop3);
-        session.save(laptop4);
 
 
         session.save(student1);
         session.save(student2);
+
+        session.save(laptop1);
+        session.save(laptop2);
+        session.save(laptop3);
+        session.save(laptop4);
 
         tx.commit();
 

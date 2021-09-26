@@ -9,13 +9,12 @@ import java.util.List;
 public class StudentR {
 
         @Id
-        @GeneratedValue(strategy=GenerationType.TABLE)
+
         private int Rollno ;
         private String Fname ;
         private int Marks ;
 
-        @OneToMany
-        @JoinColumn(name = "lid")
+        @OneToMany(mappedBy = "student")
 //        @OrderColumn(name="type")
         private List<LaptopR> laptops  = new ArrayList<>();
 

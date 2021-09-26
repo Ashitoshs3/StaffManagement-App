@@ -7,14 +7,24 @@ import javax.persistence.*;
 public class LaptopR {
         @Id
         @Column(name = "lid")
-        @GeneratedValue(strategy=GenerationType.TABLE)
+
         private int lid ;
         @Column(name = "lname")
         private String lname ;
         @Column(name = "price")
         private double price ;
+        @ManyToOne
+        private StudentR student ;
 
-        public int getLid() {
+    public StudentR getStudent() {
+        return student;
+    }
+
+    public void setStudent(StudentR student) {
+        this.student = student;
+    }
+
+    public int getLid() {
             return lid;
         }
 
