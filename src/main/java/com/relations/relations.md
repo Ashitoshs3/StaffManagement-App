@@ -13,11 +13,12 @@
   <Br>
   <Br>
   1. Method One (A separate table is created for linking) 
-    instead of creating a single object of LaptopR you have to create a List <LaptopR> and the rest is same.
+    instead of creating a single object of LaptopR you have to create a List \<LaptopR> and the rest is same.
+     (If you have done mapping in both the classes, then both the classes will responsible for mapping and create two another table like studentr_laptopr and laptopr_studentr)
      <Br>
      <Br>
      ![img_1.png](img_1.png)
      <Br>
      <Br>
-     Note: If you define the 
+     Note: 
   2. Method Two ( Mapping in the same table )
