@@ -29,3 +29,5 @@ This is a java web application for managing your Staff Data.
 * Every class should have a no argument constructor, even in the embedded classes.
 * Use \<property name="hbm2ddl.auto">create\</property> to drop the previous table and create a new table every time.
 * Default local port for MySQL data base : 3306
+
+
