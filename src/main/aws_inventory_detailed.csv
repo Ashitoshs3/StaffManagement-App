@@ -1,0 +1,50 @@
+EC2 Instances
+Instance ID,Name,Key Pair,Instance Type,State,Availability Zone,Private IP,Public IP,Volumes
+i-066ee72ff0578e7af,Maven-Jenkins,DevOps,t2.medium,stopped,ap-south-1b,172.31.0.113,N/A,vol-07389aaf8922f75ce
+i-07f9055aa191b4d57,mysql-DB,DevOps,t2.micro,stopped,ap-south-1b,172.31.14.220,N/A,vol-0749aa002befc1aa7
+i-0f015034c6397154e,Tomcat,DevOps,t2.micro,running,ap-south-1a,172.31.42.157,43.205.170.3,vol-0216e5afee80438c8
+i-0c51750835c2bb533,Nexus-Artifactory,DevOps,t2.medium,stopped,ap-south-1a,172.31.38.180,N/A,vol-0b8ed9875914a9792
+i-00efa12cd8b6b0a70,Jenkins - Training Server,DevOps,t2.large,stopped,ap-south-1a,172.31.36.89,N/A,vol-01303d175754214ff
+i-0939ac28dcf615748,Bastion-Tomcat-Server-Training,DevOps,t2.micro,stopped,ap-south-1a,172.31.45.255,N/A,vol-0c345ed95fb427a02
+i-03edf17da5c9d216c,SonarQube,DevOps,t2.medium,stopped,ap-south-1a,172.31.41.88,N/A,vol-0f76af08d47e0a6b2
+i-0e5e434cfc5100d79,Ansible Server,DevOps,t2.micro,stopped,ap-south-1a,172.31.37.56,N/A,vol-0edd1e0e27c6af9a6
+i-069c91ae7740b361f,Host Machine -1,DevOps,t2.micro,stopped,ap-south-1a,172.31.40.133,N/A,vol-023735ca53d4a82b6
+i-0a7f8a86587e26963,Host Machine - 2,DevOps,t2.micro,stopped,ap-south-1a,172.31.44.189,N/A,vol-048389020ec6fcc33
+
+----------------------------------------
+
+S3 Buckets
+Bucket Name,Region,Versioning Enabled,Lifecycle Policies,Used Storage (Bytes)
+devops-training-required-artifacts,ap-south-1,Disabled,No Policy,53478084
+sagemaker-ap-south-1-211125358623,ap-south-1,Disabled,No Policy,0
+sagemaker-studio-211125358623-s3acopnwf28,ap-south-1,Disabled,No Policy,0
+
+----------------------------------------
+
+RDS Instances
+
+
+----------------------------------------
+
+IAM Users
+User Name,User ID,ARN,Create Date
+Ashitosh-CLI,AIDATCKANKAPYWG2QOEMO,arn:aws:iam::211125358623:user/Ashitosh-CLI,2024-07-18 05:56:56
+
+----------------------------------------
+
+Lambda Functions
+Function Name,Runtime,Role,Handler,Code Size,Timeout,Last Modified
+exportcsv,python3.12,arn:aws:iam::211125358623:role/lambdaadministrator,lambda_function.lambda_handler,1395,15,2024-09-05T22:53:21.000+0000
+
+----------------------------------------
+
+VPC Components
+Component,ID,CIDR Block,State,Is Default,Availability Zone,Group Name,Description,VPC ID
+VPC,vpc-03d97a7aa7f1e6bc8,172.31.0.0/16,available,True,,,,
+Subnet,subnet-03fa9df5c9f13acf2,172.31.0.0/20,available,,ap-south-1b,,,
+Subnet,subnet-0bdb06a41e349c2f6,172.31.32.0/20,available,,ap-south-1a,,,
+Subnet,subnet-0519a804276e78700,172.31.16.0/20,available,,ap-south-1c,,,
+Security Group,sg-05753fcf1748ad763,,,,,security-group-for-outbound-nfs-d-nadiqma14nmg,[DO NOT DELETE] Security Group that allows outbound NFS traffic for SageMaker Notebooks Domain [d-nadiqma14nmg],vpc-03d97a7aa7f1e6bc8
+Security Group,sg-0cfc24ddff3f43229,,,,,DevOps-Training-SG-Public,DevOps-Training-SG-Public,vpc-03d97a7aa7f1e6bc8
+Security Group,sg-028f9448b6ab68a50,,,,,default,default VPC security group,vpc-03d97a7aa7f1e6bc8
+Security Group,sg-0ca92d541e0810675,,,,,security-group-for-inbound-nfs-d-nadiqma14nmg,[DO NOT DELETE] Security Group that allows inbound NFS traffic for SageMaker Notebooks Domain [d-nadiqma14nmg],vpc-03d97a7aa7f1e6bc8
